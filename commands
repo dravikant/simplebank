@@ -1,0 +1,8 @@
+#for migration script creation
+simplebank % migrate create -ext sql -dir db/migration -seq init_schema
+/Users/rdindokar/Documents/udemy-go-backend/simplebank/db/migration/000001_init_schema.up.sql
+/Users/rdindokar/Documents/udemy-go-backend/simplebank/db/migration/000001_init_schema.down.sql
+
+#to run migrate up
+$migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose up
+

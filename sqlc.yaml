@@ -1,0 +1,25 @@
+version: "1"
+packages:
+  - name: "db"
+    path: "./db/sqlc"
+    queries: "./db/query/"
+    schema: "./db/migration/"
+    engine: "postgresql"
+    emit_json_tags: true
+    emit_prepared_queries: false
+    emit_interface: true
+    emit_exact_table_names: false
+    emit_empty_slices: true
+
+# version: Specifies the version of the sqlc configuration file format.
+# packages: An array of packages that sqlc will generate code for. In your case, you have specified a single package named db.
+# name: The name of the package. In your case, it's "db".
+# path: The directory where sqlc should generate code for the package. In your case, it's "./db/sqlc".
+# queries: The directory where sqlc should look for SQL query files. In your case, it's "./db/query/".
+# schema: The directory where sqlc should look for the schema file. In your case, it's "./db/migration/".
+# engine: The database engine to use. In your case, it's "postgresql".
+# emit_json_tags: Whether to emit JSON tags in the generated Go code. In your case, it's set to true.
+# emit_prepared_queries: Whether to generate prepared statements. In your case, it's set to false.
+# emit_interface: Whether to generate interfaces for the generated code. In your case, it's set to true.
+# emit_exact_table_names: Whether to use exact table names in generated code. In your case, it's set to false.
+# emit_empty_slices: Whether to generate empty slices for nullable fields. In your case, it's set to true
